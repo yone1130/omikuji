@@ -1,0 +1,70 @@
+/*
+
+  index.css | Omikuji
+
+  (c) 2022 よね/Yone
+
+*/
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- Main ---------- */
+main {
+  min-height: 80vh;
+  padding: 2em 0;
+}
+
+#pageTitle {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#playTime {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+}
+
+#main span {
+  text-align: center;
+}
+
+#cards {
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.boxes {
+  margin: 16px;
+  min-width: 96px;
+  min-height: 128px;
+
+  background-color: #8080ee;
+}
+
+.boxes:hover {
+  background-color: #aaaaff;
+}
+
+#result {
+  text-align: center;
+  font-size: 128px;
+}
+
+/* ----- footer ----- */
+footer {
+  text-align: center;
+}
