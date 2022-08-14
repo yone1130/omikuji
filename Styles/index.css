@@ -19,7 +19,7 @@ body {
 
 /* ---------- Main ---------- */
 main {
-  min-height: 80vh;
+  min-height: 70vh;
   padding: 2em 0;
 }
 
@@ -55,17 +55,29 @@ main {
   margin: 16px;
   min-width: 96px;
   min-height: 128px;
+  border-radius: .5em;
 
   background-color: #8080ee;
 }
 
 .boxes:hover {
   background-color: #aaaaff;
+  cursor: pointer;
 }
 
 #result {
+  display: flex;
+  flex-direction: column;
+}
+
+#result span {
+  margin: .3em;
   text-align: center;
   font-size: 128px;
+}
+
+#result a {
+  text-align: center;
 }
 
 /* ----- footer ----- */

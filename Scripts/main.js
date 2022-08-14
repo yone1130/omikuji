@@ -56,6 +56,7 @@ function main(){
       // Add result element
       ele_result.append(`
         <span>${result}</span>
+        <a href="./">もう一度プレイ</a>
       `)
 
       // Show result
