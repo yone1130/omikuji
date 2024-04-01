@@ -1,0 +1,104 @@
+/*
+
+    Omikuji
+
+    Copyright (c) よね/Yone
+
+    Licensed under the MIT LICENSE.
+
+*/
+
+:root {
+    --font-size: 16px;
+    --theme-bgcolor: #d08040ff;
+    --theme-color: #ffffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: var(--font-size);
+}
+
+
+body {
+    background-color: var(--theme-bgcolor);
+    font-size: var(--font-size);
+    color: var(--theme-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--font-size);
+}
+
+
+.omikuji-window {
+    position: fixed;
+    top: 4vh;
+    left: 4vw;
+    width: calc(100% - 8vw - var(--this-padding) * 2);
+    height: calc(100% - 8vh - var(--this-padding) * 2);
+    box-shadow: 0 0 .5rem .5rem #00000020;
+    border-radius: 1rem;
+    background-color: #ffffffff;
+    color: #404040ff;
+}
+
+
+.omikuji-main-window {
+    --this-padding: 1rem;
+    padding: var(--this-padding);
+}
+
+
+.omikuji-window-title {
+    padding: .2rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.omikuji-window-content {
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+}
+
+
+.omikuji-fortune-area {
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 7rem;
+}
+
+
+.omikuji-description-area {
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.omikuji-copyright-area {
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+@media (max-width: 365px) {
+    :root {
+        --font-size: 12px;
+    }
+}
