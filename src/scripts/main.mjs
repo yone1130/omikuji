@@ -2,9 +2,9 @@
  * 
  * Omikuji
  * 
- * Copyright (c) よね/Yone
+ * Coded by よね/Yone
  * 
- * Licensed under the MIT LICENSE.
+ * Licensed under the CC0 1.0 Universal.
  * 
  */
 
