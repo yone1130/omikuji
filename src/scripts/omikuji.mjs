@@ -2,7 +2,7 @@
  * 
  * Omikuji
  * 
- * Copyright (c) よね/Yone
+ * Coded by よね/Yone
  * 
  * Licensed under the CC0 1.0 Universal.
  * 
