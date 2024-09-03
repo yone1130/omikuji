@@ -1,0 +1,17 @@
+# omikuji
+
+[→ English](./README.md)
+
+## 概要
+
+おみくじができるウェブサイトです。
+
+## 利用方法
+
+`src/` ディレクトリをデプロイします。
+
+## ライセンス
+
+[CC0 1.0 Universal](https://github.com/yone1130/omikuji/tree/production/LICENSE) のもとでライセンスされます。
+
+クリエイティブ・コモンズCC0ライセンスは、作品の著作権を最大限放棄し、それを世界的なパブリックドメインに献呈するものです。
