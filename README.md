@@ -6,6 +6,8 @@
 
 Omikuji (Japanese fortunes) website.
 
+Published at https://omikuji.yoneyo.com/
+
 ## Usage
 
 Deploy directory `src/`.
