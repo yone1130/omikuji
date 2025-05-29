@@ -9,47 +9,130 @@
  */
 
 export class Omikuji {
-    constructor() {
-        document.addEventListener("DOMContentLoaded", () => this.onLoaded());
+    /**
+     * @param {{
+     *     root: HTMLElement,
+     *     interval?: number,
+     *     fortunes?: string[],
+     * }}
+     */
+    constructor({
+        root,
+        interval = Omikuji.DEFAULT_INTERVAL,
+        fortunes = Omikuji.DEFAULT_FORTUNES,
+    }) {
+        if (!(root instanceof HTMLElement)) {
+            throw new Error("Invalid root element.");
+        }
+
+        this.#root = root;
+        this.#interval = interval;
+        this.#fortunes = fortunes;
     }
 
+    /**
+     * @type {number}
+     */
+    static DEFAULT_INTERVAL = 1000 / 30;
 
+    /**
+     * @type {string[]}
+     */
+    static DEFAULT_FORTUNES = [
+        "大吉",
+        "中吉",
+        "小吉",
+        "吉",
+        "末吉",
+        "凶"
+    ];
+
+    /**
+     * @type {HTMLElement | null}
+     */
+    #root = null;
+
+    /**
+     * @type {number | null}
+     */
+    #interval = null;
+
+    /**
+     * @type {string[] | null}
+     */
+    #fortunes = null;
+
+    /**
+     * @returns {HTMLElement}
+     */
+    get root() {
+        return this.#root;
+    }
+
+    /**
+     * @returns {number | null}
+     */
     get interval() {
-        return (1000 / 30);
+        return this.#interval;
     }
 
+    /**
+     * @param {number} value
+     */
+    set interval(value) {
+        if (value < 1000 / 60) {
+            throw new Error("Interval must be at least 1000 / 60 milliseconds.");
+        }
+        this.#interval = value;
+    }
 
+    /**
+     * @returns {string[] | null}
+     */
     get fortunes() {
-        return ([
-            "大吉",
-            "中吉",
-            "小吉",
-            "吉",
-            "末吉",
-            "凶"
-        ])
+        return this.#fortunes;
     }
 
+    /**
+     * @param {string[]} value
+     */
+    set fortunes(value) {
+        if (!Array.isArray(value) || value.length === 0) {
+            throw new Error("Fortunes must be a non-empty array.");
+        }
+        this.#fortunes = value;
+    }
 
+    /**
+     * @returns {number}
+     */
     get lengthOfFortunes() {
-        return (this.fortunes.length);
+        return this.fortunes.length;
     }
 
-
-    onLoaded() {
-        this.fortuneElement = document.getElementById("fortuneArea");
+    /**
+     * @returns {Omikuji}
+     */
+    start() {
+        this.#root = document.getElementById("fortuneArea");
         setInterval(() => this.mainloop(), this.interval);
+        return this;
     }
 
-
+    /**
+     * @returns {void}
+     */
     mainloop() {
-        const randomInt = this.getRandomInt(this.lengthOfFortunes);
+        const randomInt = this.#getRandomInt(this.lengthOfFortunes);
         const fortune = this.fortunes[randomInt];
-        this.fortuneElement.innerText = fortune;
+        this.#root.innerText = fortune;
     }
 
-
-    getRandomInt(maxValue) {
+    /**
+     * @param {number} maxValue
+     * @returns {number}
+     */
+    #getRandomInt(maxValue) {
         return (Math.floor(Math.random() * maxValue));
     }
 }

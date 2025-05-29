@@ -14,24 +14,20 @@
     --theme-color: #ffffffff;
 }
 
-
 * {
     margin: 0;
     padding: 0;
 }
 
-
 html {
     font-size: var(--font-size);
 }
-
 
 body {
     background-color: var(--theme-bgcolor);
     font-size: var(--font-size);
     color: var(--theme-color);
 }
-
 
 h1,
 h2,
@@ -41,7 +37,6 @@ h5,
 h6 {
     font-size: var(--font-size);
 }
-
 
 .omikuji-window {
     position: fixed;
@@ -55,12 +50,10 @@ h6 {
     color: #404040ff;
 }
 
-
 .omikuji-main-window {
     --this-padding: 1rem;
     padding: var(--this-padding);
 }
-
 
 .omikuji-window-title {
     padding: .2rem 0;
@@ -68,12 +61,10 @@ h6 {
     font-size: 1.2rem;
 }
 
-
 .omikuji-window-content {
     margin: 1rem 0;
     padding: 1rem 1rem;
 }
-
 
 .omikuji-fortune-area {
     margin: 1rem 0;
@@ -82,20 +73,17 @@ h6 {
     font-size: 7rem;
 }
 
-
 .omikuji-description-area {
     margin: 1rem 0;
     padding: 1rem;
     text-align: center;
 }
 
-
 .omikuji-copyright-area {
     margin: 1rem 0;
     padding: 1rem;
     text-align: center;
 }
-
 
 @media (max-width: 365px) {
     :root {

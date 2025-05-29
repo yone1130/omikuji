@@ -10,7 +10,8 @@
 
 import { Omikuji } from "./omikuji.mjs";
 
-
-(() => {
-    new Omikuji();
-})();
+document.addEventListener("DOMContentLoaded", () => {
+    new Omikuji({
+        root: document.getElementById("fortuneArea"),
+    }).start();
+});
