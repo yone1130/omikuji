@@ -1,41 +1,70 @@
-<!--
+<!--!
 
     Omikuji
 
     Coded by よね/Yone
-
     Licensed under the CC0 1.0 Universal.
+
+    https://github.com/yone1130/omikuji
 
 -->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja-JP">
 
-<head>
+<head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
+
+    <!-- Meta -->
+    <title>おみくじ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>おみくじ</title>
+    <!-- OGP -->
+    <meta property="og:url" content="https://omikuji.yoneyo.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="おみくじ">
+    <meta property="og:title" content="おみくじ">
+    <meta property="og:description" content="おみくじができるウェブサイトです。">
 
-    <link rel="stylesheet" href="./styles/common.css">
-    <script src="./scripts/main.mjs" type="module"></script>
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="./styles/omikuji.css">
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js" type="module"></script>
 </head>
 
 <body>
     <main>
-        <section id="mainWindow" class="omikuji-window omikuji-main-window">
-            <h2 class="omikuji-title omikuji-page-title omikuji-window-title omikuji-main-title">
-                おみくじ - omikuji.yoneyo.com
-            </h2>
+        <section id="mainWindow" class="omikuji__window omikuji__main-window">
+            <div class="omikuji__window__title omikuji__main-window__title">
+                <h1 class="omikuji__title">
+                    おみくじ
+                </h1>
 
-            <div class="omikuji-window-content omikuji-main-content">
-                <div id="fortuneArea" class="omikuji-fortune-area"></div>
+                <p class="omikuji__subtitle">
+                    omikuji.yoneyo.com
+                </p>
+            </div>
 
-                <div class="omikuji-description-area">
-                    <p>スクショを撮って共有しよう！</p>
+            <div class="omikuji__window__content omikuji__main-window__content">
+                <div id="omikuji-fortune-area" class="omikuji__fortune-area"></div>
+
+                <div class="omikuji__description-area">
+                    <p>
+                        スクショを撮って共有しよう！
+                    </p>
                 </div>
 
-                <div class="omikuji-copyright-area">
-                    <small>Coded by よね/Yone</small>
+                <div class="omikuji__copyright-area">
+                    <small>
+                        Coded by よね/Yone
+                    </small>
                 </div>
             </div>
         </section>
