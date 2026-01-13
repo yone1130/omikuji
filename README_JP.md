@@ -1,6 +1,6 @@
-# omikuji
+# Omikuji
 
-[→ English](./README.md)
+[Read in English >](./README.md)
 
 ## 概要
 
@@ -17,3 +17,5 @@ https://omikuji.yoneyo.com/ で公開しています。
 [CC0 1.0 Universal](./LICENSE) のもとでライセンスされます。
 
 クリエイティブ・コモンズCC0ライセンスは、作品の著作権を最大限放棄し、それを世界的なパブリックドメインに献呈するものです。
+
+よね/Yone によってコーディングされました。
