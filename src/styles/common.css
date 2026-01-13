@@ -1,32 +1,41 @@
-/*
+@charset "UTF-8";
+
+/*!
 
     Omikuji
 
     Coded by よね/Yone
-
     Licensed under the CC0 1.0 Universal.
+
+    https://github.com/yone1130/omikuji
 
 */
 
 :root {
     --font-size: 16px;
-    --theme-bgcolor: #d08040ff;
-    --theme-color: #ffffffff;
-}
+    --font-family: "Local Noto Sans JP", "Noto Sans JP", Arial, sans-serif;
+    --theme-bgcolor: #d84;
+    --theme-color: #fff;
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
     font-size: var(--font-size);
+
+    @media (width < 366px) {
+        --font-size: 12px;
+    }
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: var(--theme-bgcolor);
     font-size: var(--font-size);
+    font-family: var(--font-family);
     color: var(--theme-color);
+
+    & * {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 h1,
@@ -38,55 +47,23 @@ h6 {
     font-size: var(--font-size);
 }
 
-.omikuji-window {
-    position: fixed;
-    top: 4vh;
-    left: 4vw;
-    width: calc(100% - 8vw - var(--this-padding) * 2);
-    height: calc(100% - 8vh - var(--this-padding) * 2);
-    box-shadow: 0 0 .5rem .5rem #00000020;
-    border-radius: 1rem;
-    background-color: #ffffffff;
-    color: #404040ff;
-}
+/* button */
 
-.omikuji-main-window {
-    --this-padding: 1rem;
-    padding: var(--this-padding);
-}
+.button {
+    border-radius: 100lvw;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #eee;
+    text-decoration: none;
 
-.omikuji-window-title {
-    padding: .2rem 0;
-    text-align: center;
-    font-size: 1.2rem;
-}
+    cursor: pointer;
+    user-select: none;
 
-.omikuji-window-content {
-    margin: 1rem 0;
-    padding: 1rem 1rem;
-}
+    transition: background-color 0.3s,
+        color 0.3s;
 
-.omikuji-fortune-area {
-    margin: 1rem 0;
-    padding: 1rem;
-    text-align: center;
-    font-size: 7rem;
-}
-
-.omikuji-description-area {
-    margin: 1rem 0;
-    padding: 1rem;
-    text-align: center;
-}
-
-.omikuji-copyright-area {
-    margin: 1rem 0;
-    padding: 1rem;
-    text-align: center;
-}
-
-@media (max-width: 365px) {
-    :root {
-        --font-size: 12px;
+    &:hover {
+        background-color: #eee;
+        color: #222;
     }
 }

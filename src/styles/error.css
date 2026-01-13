@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/*!
+
+    Omikuji
+
+    Coded by よね/Yone
+    Licensed under the CC0 1.0 Universal.
+
+    https://github.com/yone1130/omikuji
+
+*/
+
+/* page */
+
+.error__page {
+    display: flex;
+    box-sizing: border-box;
+    min-height: 100dvh;
+
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* card */
+
+.error__card {
+    display: flex;
+
+    box-sizing: border-box;
+    box-shadow: 0 0 .5rem .5rem #0002;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    background-color: #fff;
+    color: #222;
+}
+
+/* title */
+
+.error__title {
+    font-size: 2rem;
+}
