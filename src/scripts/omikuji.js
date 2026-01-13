@@ -1,10 +1,11 @@
-/**
+/**!
  * 
  * Omikuji
  * 
  * Coded by よね/Yone
- * 
  * Licensed under the CC0 1.0 Universal.
+ * 
+ * https://github.com/yone1130/omikuji
  * 
  */
 
@@ -114,7 +115,6 @@ export class Omikuji {
      * @returns {Omikuji}
      */
     start() {
-        this.#root = document.getElementById("fortuneArea");
         setInterval(() => this.mainloop(), this.interval);
         return this;
     }
