@@ -12,12 +12,14 @@
 */
 
 :root {
-    --font-size: 16px;
     --font-family: "Local Noto Sans JP", "Noto Sans JP", Arial, sans-serif;
+    --font-size: 16px;
+    --font-weight: 400;
     --theme-bgcolor: #d84;
     --theme-color: #fff;
 
     font-size: var(--font-size);
+    font-weight: var(--font-weight);
 
     @media (width < 366px) {
         --font-size: 12px;
@@ -28,13 +30,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--theme-bgcolor);
-    font-size: var(--font-size);
     font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
     color: var(--theme-color);
 
     & * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 }
 
